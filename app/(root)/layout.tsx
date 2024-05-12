@@ -1,10 +1,8 @@
 import MobileNav from "@/components/shared/MobileNav";
 import Sidebar from "@/components/shared/Sidebar";
-import { auth } from "@clerk/nextjs/server";
 import React from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  auth().protect();
   return (
     <main className="root">
       <Sidebar />
